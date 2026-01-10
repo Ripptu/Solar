@@ -8,39 +8,39 @@ const Intro: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 text-center md:text-left">
         
         {/* USP 1 */}
-        <div className="flex flex-col items-center md:items-start p-6 rounded-2xl hover:bg-slate-50 transition-colors duration-500">
+        <div className="flex flex-col items-center md:items-start p-6 rounded-2xl hover:bg-slate-900 border border-transparent hover:border-white/5 transition-all duration-500">
            <Reveal>
-             <div className="w-12 h-12 bg-sky-100 text-sky-700 rounded-full flex items-center justify-center mb-6">
+             <div className="w-12 h-12 bg-brand-orange/20 text-brand-orange rounded-full flex items-center justify-center mb-6 border border-brand-orange/20">
                 <Clock size={24} />
              </div>
-             <h3 className="text-xl font-serif italic font-bold mb-4">Sofort Verfügbar</h3>
-             <p className="text-neutral-600 font-light leading-relaxed">
+             <h3 className="text-xl font-serif italic font-bold mb-4 text-white">Sofort Verfügbar</h3>
+             <p className="text-slate-400 font-light leading-relaxed">
                Keine monatelangen Wartezeiten. Unsere Hardware liegt direkt in Weiden auf Lager. Wir starten, wenn Sie bereit sind.
              </p>
            </Reveal>
         </div>
 
         {/* USP 2 */}
-        <div className="flex flex-col items-center md:items-start p-6 rounded-2xl hover:bg-slate-50 transition-colors duration-500">
+        <div className="flex flex-col items-center md:items-start p-6 rounded-2xl hover:bg-slate-900 border border-transparent hover:border-white/5 transition-all duration-500">
            <Reveal delay={0.4}>
-             <div className="w-12 h-12 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center mb-6">
+             <div className="w-12 h-12 bg-amber-500/20 text-amber-500 rounded-full flex items-center justify-center mb-6 border border-amber-500/20">
                 <ShieldCheck size={24} />
              </div>
-             <h3 className="text-xl font-serif italic font-bold mb-4">Premium Qualität</h3>
-             <p className="text-neutral-600 font-light leading-relaxed">
+             <h3 className="text-xl font-serif italic font-bold mb-4 text-white">Premium Qualität</h3>
+             <p className="text-slate-400 font-light leading-relaxed">
                Wir verbauen ausschließlich PV-Module und Wechselrichter namhafter Hersteller für maximale Effizienz und Langlebigkeit.
              </p>
            </Reveal>
         </div>
 
         {/* USP 3 */}
-        <div className="flex flex-col items-center md:items-start p-6 rounded-2xl hover:bg-slate-50 transition-colors duration-500">
+        <div className="flex flex-col items-center md:items-start p-6 rounded-2xl hover:bg-slate-900 border border-transparent hover:border-white/5 transition-all duration-500">
            <Reveal delay={0.6}>
-             <div className="w-12 h-12 bg-slate-100 text-slate-700 rounded-full flex items-center justify-center mb-6">
+             <div className="w-12 h-12 bg-white/10 text-white rounded-full flex items-center justify-center mb-6 border border-white/10">
                 <Zap size={24} />
              </div>
-             <h3 className="text-xl font-serif italic font-bold mb-4">24h Reaktionszeit</h3>
-             <p className="text-neutral-600 font-light leading-relaxed">
+             <h3 className="text-xl font-serif italic font-bold mb-4 text-white">24h Reaktionszeit</h3>
+             <p className="text-slate-400 font-light leading-relaxed">
                Schnelligkeit ist unser Versprechen. Sie erhalten Beratungstermine und Kostenvoranschläge innerhalb eines Werktages.
              </p>
            </Reveal>

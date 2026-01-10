@@ -49,7 +49,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
             animate="visible"
             exit="exit"
             onClick={onClose}
-            className="absolute inset-0 bg-slate-900/60 backdrop-blur-md"
+            className="absolute inset-0 bg-black/80 backdrop-blur-md"
           />
 
           {/* Modal */}
@@ -58,21 +58,21 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="relative w-full max-w-lg bg-white rounded-[2.5rem] overflow-hidden shadow-2xl p-8 md:p-10"
+            className="relative w-full max-w-lg bg-slate-900 border border-slate-800 rounded-[2.5rem] overflow-hidden shadow-2xl p-8 md:p-10"
           >
             <button 
               onClick={onClose}
-              className="absolute top-6 right-6 p-2 bg-slate-100 rounded-full text-slate-500 hover:bg-slate-200 transition-colors"
+              className="absolute top-6 right-6 p-2 bg-slate-800 rounded-full text-slate-400 hover:bg-slate-700 hover:text-white transition-colors"
             >
               <X size={20} />
             </button>
 
             <div className="text-center mb-8">
-              <div className="inline-block px-4 py-1.5 rounded-full bg-green-100 text-green-700 text-xs font-bold uppercase tracking-wider mb-4">
+              <div className="inline-block px-4 py-1.5 rounded-full bg-brand-orange/10 text-brand-orange text-xs font-bold uppercase tracking-wider mb-4 border border-brand-orange/20">
                 Schnelle Antwort garantiert
               </div>
-              <h2 className="font-serif text-3xl md:text-4xl text-slate-900 mb-3">Kontakt aufnehmen</h2>
-              <p className="text-slate-500 font-light">
+              <h2 className="font-serif text-3xl md:text-4xl text-white mb-3">Kontakt aufnehmen</h2>
+              <p className="text-slate-400 font-light">
                 Wie möchten Sie uns am liebsten erreichen? <br/>Wir melden uns innerhalb von 24h.
               </p>
             </div>
@@ -90,12 +90,12 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                 className="group flex items-center justify-between p-5 rounded-2xl bg-[#25D366]/10 hover:bg-[#25D366] border border-[#25D366]/20 transition-all duration-300"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#25D366] shadow-sm">
+                  <div className="w-12 h-12 rounded-full bg-[#25D366]/10 group-hover:bg-white flex items-center justify-center text-[#25D366] shadow-sm transition-colors">
                     <MessageCircle size={24} fill="currentColor" className="text-[#25D366]" />
                   </div>
                   <div className="text-left">
-                    <div className="font-bold text-slate-900 group-hover:text-white transition-colors">WhatsApp</div>
-                    <div className="text-xs text-slate-500 group-hover:text-white/80 transition-colors">Direkter Chat (Empfohlen)</div>
+                    <div className="font-bold text-white transition-colors">WhatsApp</div>
+                    <div className="text-xs text-slate-400 group-hover:text-white/80 transition-colors">Direkter Chat (Empfohlen)</div>
                   </div>
                 </div>
                 <ArrowRight className="text-[#25D366] group-hover:text-white transition-colors transform group-hover:translate-x-1" />
@@ -108,18 +108,18 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                 initial="hidden"
                 animate="visible"
                 href="tel:+4917661644048"
-                className="group flex items-center justify-between p-5 rounded-2xl bg-slate-50 hover:bg-slate-800 border border-slate-100 transition-all duration-300"
+                className="group flex items-center justify-between p-5 rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 transition-all duration-300"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-slate-700 shadow-sm">
+                  <div className="w-12 h-12 rounded-full bg-slate-700 group-hover:bg-white flex items-center justify-center text-white group-hover:text-slate-900 shadow-sm transition-colors">
                     <Phone size={24} />
                   </div>
                   <div className="text-left">
-                    <div className="font-bold text-slate-900 group-hover:text-white transition-colors">Anrufen</div>
-                    <div className="text-xs text-slate-500 group-hover:text-slate-300 transition-colors">+49 176 616 440 48</div>
+                    <div className="font-bold text-white transition-colors">Anrufen</div>
+                    <div className="text-xs text-slate-400 group-hover:text-slate-300 transition-colors">+49 176 616 440 48</div>
                   </div>
                 </div>
-                <ArrowRight className="text-slate-300 group-hover:text-white transition-colors transform group-hover:translate-x-1" />
+                <ArrowRight className="text-slate-500 group-hover:text-white transition-colors transform group-hover:translate-x-1" />
               </motion.a>
 
               {/* Mail Option */}
@@ -129,18 +129,18 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                 initial="hidden"
                 animate="visible"
                 href="mailto:kontakt@ab-energies.de"
-                className="group flex items-center justify-between p-5 rounded-2xl bg-slate-50 hover:bg-slate-800 border border-slate-100 transition-all duration-300"
+                className="group flex items-center justify-between p-5 rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 transition-all duration-300"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-slate-700 shadow-sm">
+                  <div className="w-12 h-12 rounded-full bg-slate-700 group-hover:bg-white flex items-center justify-center text-white group-hover:text-slate-900 shadow-sm transition-colors">
                     <Mail size={24} />
                   </div>
                   <div className="text-left">
-                    <div className="font-bold text-slate-900 group-hover:text-white transition-colors">E-Mail</div>
-                    <div className="text-xs text-slate-500 group-hover:text-slate-300 transition-colors">kontakt@ab-energies.de</div>
+                    <div className="font-bold text-white transition-colors">E-Mail</div>
+                    <div className="text-xs text-slate-400 group-hover:text-slate-300 transition-colors">kontakt@ab-energies.de</div>
                   </div>
                 </div>
-                <ArrowRight className="text-slate-300 group-hover:text-white transition-colors transform group-hover:translate-x-1" />
+                <ArrowRight className="text-slate-500 group-hover:text-white transition-colors transform group-hover:translate-x-1" />
               </motion.a>
             </div>
 
@@ -149,7 +149,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
               variants={itemVariants}
               initial="hidden"
               animate="visible"
-              className="mt-8 text-center text-xs text-slate-400"
+              className="mt-8 text-center text-xs text-slate-500"
             >
               Indem Sie Kontakt aufnehmen, stimmen Sie unseren Datenschutzbestimmungen zu.
             </motion.div>

@@ -41,15 +41,15 @@ const Expertise: React.FC = () => {
         <div className="md:col-span-4 flex flex-col justify-between h-full">
           <Reveal>
             <div>
-              <div className="inline-block px-3 py-1 mb-4 rounded-full bg-amber-100 text-amber-700 text-xs font-bold uppercase tracking-wider">
+              <div className="inline-block px-3 py-1 mb-4 rounded-full bg-brand-orange/10 text-brand-orange text-xs font-bold uppercase tracking-wider border border-brand-orange/20">
                   Service & Beratung
               </div>
-              <h2 className="font-serif text-5xl italic text-brand-dark mb-8">Mehr als nur Hardware.</h2>
-              <p className="text-neutral-500 mb-8 leading-relaxed">
+              <h2 className="font-serif text-5xl italic text-white mb-8">Mehr als nur Hardware.</h2>
+              <p className="text-slate-400 mb-8 leading-relaxed">
                   AB-Energies steht für Geschwindigkeit und Handschlagqualität. Wir begleiten Sie von der ersten Idee bis zur fertigen Anlage – und darüber hinaus.
               </p>
             </div>
-            <a href="#kontakt" className="hidden md:flex items-center gap-2 bg-brand-dark text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-slate-800 transition-colors w-fit shadow-lg shadow-slate-200">
+            <a href="#kontakt" className="hidden md:flex items-center gap-2 bg-white text-brand-dark px-6 py-3 rounded-full text-sm font-medium hover:bg-slate-200 transition-colors w-fit shadow-lg shadow-black/50">
               Beratung vereinbaren <ArrowRight size={16} />
             </a>
           </Reveal>
@@ -59,17 +59,17 @@ const Expertise: React.FC = () => {
         <div className="md:col-span-8">
           <div className="flex flex-col">
             {services.map((service) => (
-              <div key={service.id} className="border-t border-neutral-200">
+              <div key={service.id} className="border-t border-slate-800">
                 <button 
                   onClick={() => toggle(service.id)}
                   className="w-full py-8 flex justify-between items-center text-left hover:opacity-70 transition-opacity"
                 >
-                  <span className={`text-xl md:text-2xl font-light transition-colors ${activeId === service.id ? 'text-brand-dark font-medium' : 'text-neutral-400'}`}>
+                  <span className={`text-xl md:text-2xl font-light transition-colors ${activeId === service.id ? 'text-brand-orange font-medium' : 'text-slate-500'}`}>
                       {service.title}
                   </span>
                   <motion.div 
                     animate={{ rotate: activeId === service.id ? 45 : 0 }}
-                    className={`p-2 border rounded-full transition-colors ${activeId === service.id ? 'border-brand-dark text-brand-dark bg-slate-50' : 'border-neutral-200 text-neutral-400'}`}
+                    className={`p-2 border rounded-full transition-colors ${activeId === service.id ? 'border-brand-orange text-brand-orange bg-brand-orange/10' : 'border-slate-800 text-slate-500'}`}
                   >
                     <Plus size={20} />
                   </motion.div>
@@ -83,7 +83,7 @@ const Expertise: React.FC = () => {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <p className="pb-8 text-neutral-600 font-light max-w-2xl text-lg pl-2 leading-relaxed">
+                      <p className="pb-8 text-slate-400 font-light max-w-2xl text-lg pl-2 leading-relaxed">
                         {service.description}
                       </p>
                     </motion.div>
@@ -91,7 +91,7 @@ const Expertise: React.FC = () => {
                 </AnimatePresence>
               </div>
             ))}
-            <div className="border-t border-neutral-200"></div>
+            <div className="border-t border-slate-800"></div>
           </div>
         </div>
       </div>

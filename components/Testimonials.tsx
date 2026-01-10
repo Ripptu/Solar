@@ -66,10 +66,10 @@ const thirdColumn = testimonials.slice(6, 9);
 
 const Testimonials = () => {
   return (
-    <section className="bg-slate-50 py-24 relative overflow-hidden">
+    <section className="bg-brand-dark py-24 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent"></div>
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-sky-100/50 blur-[100px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-800 to-transparent"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-orange/10 blur-[100px] rounded-full pointer-events-none"></div>
 
       <div className="container px-6 max-w-[1600px] mx-auto relative z-10">
         <motion.div
@@ -80,12 +80,12 @@ const Testimonials = () => {
           className="flex flex-col items-center justify-center max-w-[640px] mx-auto text-center mb-16"
         >
           <div className="flex justify-center mb-6">
-            <div className="border border-brand-dark/10 bg-white py-1.5 px-5 rounded-full text-sm font-medium uppercase tracking-wider text-brand-dark/70 shadow-sm">
+            <div className="border border-white/10 bg-white/5 py-1.5 px-5 rounded-full text-sm font-medium uppercase tracking-wider text-slate-400 shadow-sm">
               Kundenstimmen
             </div>
           </div>
 
-          <div className="flex gap-1 mb-6 text-yellow-400">
+          <div className="flex gap-1 mb-6 text-brand-orange">
              <Star fill="currentColor" size={20} />
              <Star fill="currentColor" size={20} />
              <Star fill="currentColor" size={20} />
@@ -93,10 +93,10 @@ const Testimonials = () => {
              <Star fill="currentColor" size={20} />
           </div>
 
-          <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-brand-dark mb-6">
+          <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl text-white mb-6">
             Was Kunden über uns sagen
           </h2>
-          <p className="text-slate-500 text-lg font-light leading-relaxed">
+          <p className="text-slate-400 text-lg font-light leading-relaxed">
             Ehrliche Meinungen aus der Region. Wir sind stolz auf das Vertrauen unserer Kunden aus Weiden und der Oberpfalz.
           </p>
         </motion.div>

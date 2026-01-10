@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
   return (
     <>
       <footer id="kontakt" className="px-4 pb-4 md:px-6 md:pb-6 pt-12">
-        <div className="bg-slate-950 rounded-3xl md:rounded-[3rem] px-6 py-16 md:px-20 md:py-24 text-white relative overflow-hidden flex flex-col justify-between min-h-[80vh]">
+        <div className="bg-black border border-white/5 rounded-3xl md:rounded-[3rem] px-6 py-16 md:px-20 md:py-24 text-white relative overflow-hidden flex flex-col justify-between min-h-[80vh]">
           
           {/* Subtle Grid Pattern Background */}
           <div className="absolute inset-0 opacity-[0.03]" 
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
           <div className="relative z-10">
               <Reveal>
                 <div className="flex items-center gap-3 mb-12 opacity-60">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse"></div>
                   <span className="text-xs font-bold tracking-[0.2em] uppercase">Status: Verfügbar für neue Projekte</span>
                 </div>
               </Reveal>
@@ -80,14 +80,14 @@ const Footer: React.FC = () => {
               <Reveal delay={0.2}>
                 <h2 className="font-serif text-5xl md:text-8xl lg:text-9xl tracking-tight leading-[0.9] mb-12">
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-slate-500">Energie,</span>
-                  <span className="block italic opacity-90">die bleibt.</span>
+                  <span className="block italic opacity-90 text-brand-orange">die bleibt.</span>
                 </h2>
               </Reveal>
               
               <Reveal delay={0.4}>
                  <a 
                    href="https://wa.me/4917661644048"
-                   className="group inline-flex items-center gap-4 text-2xl md:text-4xl font-light hover:text-yellow-400 transition-colors border-b border-white/20 pb-2 hover:border-yellow-400"
+                   className="group inline-flex items-center gap-4 text-2xl md:text-4xl font-light hover:text-brand-orange transition-colors border-b border-white/20 pb-2 hover:border-brand-orange"
                  >
                    <span>Starten Sie Ihr Projekt</span>
                    <ArrowUpRight className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300" size={32} />
@@ -101,7 +101,7 @@ const Footer: React.FC = () => {
                   
                   {/* Brand */}
                   <div className="md:col-span-4">
-                      <h3 className="font-serif italic text-2xl mb-4">AB-Energies.</h3>
+                      <h3 className="font-serif italic text-2xl mb-4 text-white">AB-Energies.</h3>
                       <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
                           Ihr Partner für Photovoltaik in Weiden & der Oberpfalz. 
                           Qualität, die sich rechnet. Service, der begeistert.
@@ -112,8 +112,8 @@ const Footer: React.FC = () => {
                   <div className="md:col-span-3">
                       <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-6">Kontakt</h4>
                       <div className="flex flex-col gap-3 text-sm font-medium">
-                          <a href="tel:+4917661644048" className="hover:text-yellow-400 transition-colors">+49 176 616 440 48</a>
-                          <a href="mailto:kontakt@ab-energies.de" className="hover:text-yellow-400 transition-colors">kontakt@ab-energies.de</a>
+                          <a href="tel:+4917661644048" className="hover:text-brand-orange transition-colors">+49 176 616 440 48</a>
+                          <a href="mailto:kontakt@ab-energies.de" className="hover:text-brand-orange transition-colors">kontakt@ab-energies.de</a>
                           <p className="text-slate-400">92637 Weiden in der Oberpfalz</p>
                       </div>
                   </div>
@@ -149,8 +149,8 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Background Gradient Spot */}
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-900/20 blur-[150px] rounded-full pointer-events-none mix-blend-screen"></div>
-          <div className="absolute bottom-0 left-0 w-[800px] h-[400px] bg-orange-900/10 blur-[120px] rounded-full pointer-events-none mix-blend-screen"></div>
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-orange/10 blur-[150px] rounded-full pointer-events-none mix-blend-screen"></div>
+          <div className="absolute bottom-0 left-0 w-[800px] h-[400px] bg-brand-orange/5 blur-[120px] rounded-full pointer-events-none mix-blend-screen"></div>
         </div>
       </footer>
 

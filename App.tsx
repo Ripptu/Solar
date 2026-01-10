@@ -21,7 +21,7 @@ function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#ffffff] selection:bg-yellow-200">
+    <div className="relative min-h-screen bg-brand-dark selection:bg-brand-orange selection:text-white">
       <Hero 
         onOpenCatalog={handleOpenCatalog} 
         onOpenContact={handleOpenContact}

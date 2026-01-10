@@ -77,14 +77,14 @@ interface WorkProps {
 
 const Work: React.FC<WorkProps> = ({ isOpen, setIsOpen }) => {
   return (
-    <section id="produkte" className="py-20 px-6 md:px-12 max-w-[1600px] mx-auto bg-slate-50/50 rounded-[3rem] my-12 transition-all duration-500">
+    <section id="produkte" className="py-20 px-6 md:px-12 max-w-[1600px] mx-auto bg-slate-900 rounded-[3rem] my-12 transition-all duration-500 border border-white/5">
       <div className="mb-10 text-center">
          <Reveal>
-            <div className="inline-block px-3 py-1 mb-4 rounded-full bg-brand-dark/5 text-brand-dark text-xs font-bold uppercase tracking-wider">
+            <div className="inline-block px-3 py-1 mb-4 rounded-full bg-brand-orange/10 text-brand-orange text-xs font-bold uppercase tracking-wider border border-brand-orange/20">
                Katalog
             </div>
-            <h2 className="font-serif text-4xl md:text-5xl text-brand-dark mb-4">Unser Sortiment</h2>
-            <p className="text-neutral-500 font-light max-w-xl mx-auto mb-8">
+            <h2 className="font-serif text-4xl md:text-5xl text-white mb-4">Unser Sortiment</h2>
+            <p className="text-slate-400 font-light max-w-xl mx-auto mb-8">
                 Hochwertige Komponenten und Komplettsysteme. Lagernd in Weiden i.d.Opf. und bereit für Ihr Projekt.
             </p>
             
@@ -95,8 +95,8 @@ const Work: React.FC<WorkProps> = ({ isOpen, setIsOpen }) => {
                 whileTap={{ scale: 0.95 }}
                 className={`group flex items-center gap-3 px-8 py-4 rounded-full text-lg font-bold transition-all shadow-xl ${
                     isOpen 
-                    ? 'bg-slate-200 text-brand-dark hover:bg-slate-300' 
-                    : 'bg-brand-dark text-white hover:bg-slate-800 shadow-brand-dark/20'
+                    ? 'bg-slate-800 text-white hover:bg-slate-700' 
+                    : 'bg-brand-orange text-white hover:bg-brand-orange-hover shadow-brand-orange/20'
                 } mx-auto`}
             >
                 {isOpen ? (
@@ -121,26 +121,26 @@ const Work: React.FC<WorkProps> = ({ isOpen, setIsOpen }) => {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="overflow-hidden"
             >
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8 pb-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8 pb-8 px-4">
                     {products.map((product) => (
                         <ProductCard key={product.id} product={product} />
                     ))}
                     
                     {/* Custom Card for Custom Request */}
                     <Reveal>
-                        <div className="h-full min-h-[500px] bg-brand-dark text-white rounded-3xl p-8 flex flex-col items-center justify-center text-center relative overflow-hidden group">
-                            <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-black z-0"></div>
+                        <div className="h-full min-h-[500px] bg-gradient-to-br from-brand-orange to-red-600 text-white rounded-3xl p-8 flex flex-col items-center justify-center text-center relative overflow-hidden group border border-white/10">
+                            <div className="absolute inset-0 bg-black/10 z-0"></div>
                             <div className="relative z-10 p-4">
-                                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                                     <Info size={32} />
                                 </div>
                                 <h3 className="font-serif text-3xl mb-4">Individuelle Anfrage?</h3>
-                                <p className="text-white/60 mb-8 font-light">
+                                <p className="text-white/80 mb-8 font-light">
                                     Sie benötigen eine spezielle Konfiguration oder größere Mengen? Kontaktieren Sie uns für ein maßgeschneidertes Angebot.
                                 </p>
                                 <a 
                                     href="https://wa.me/4917661644048"
-                                    className="inline-flex items-center gap-2 bg-white text-brand-dark font-bold px-8 py-4 rounded-xl hover:bg-slate-200 transition-colors"
+                                    className="inline-flex items-center gap-2 bg-white text-brand-orange font-bold px-8 py-4 rounded-xl hover:bg-slate-100 transition-colors"
                                 >
                                     <MessageCircle size={20} />
                                     Direkt anfragen
@@ -153,7 +153,7 @@ const Work: React.FC<WorkProps> = ({ isOpen, setIsOpen }) => {
                 <div className="flex justify-center pb-8">
                     <button 
                         onClick={() => setIsOpen(false)}
-                        className="text-slate-400 hover:text-brand-dark text-sm font-medium uppercase tracking-widest flex items-center gap-2 transition-colors"
+                        className="text-slate-500 hover:text-white text-sm font-medium uppercase tracking-widest flex items-center gap-2 transition-colors"
                     >
                         Weniger anzeigen <ChevronUp size={16} />
                     </button>
@@ -168,18 +168,18 @@ const Work: React.FC<WorkProps> = ({ isOpen, setIsOpen }) => {
 const ProductCard: React.FC<{ product: Project }> = ({ product }) => {
   return (
     <Reveal>
-      <div className="group flex flex-col h-full bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-slate-300/50 transition-all duration-500">
+      <div className="group flex flex-col h-full bg-slate-950 rounded-3xl overflow-hidden border border-slate-800 shadow-lg shadow-black/50 hover:shadow-2xl hover:border-slate-700 transition-all duration-500">
         
         {/* Image Area */}
-        <div className="relative w-full aspect-[4/3] overflow-hidden bg-slate-100">
+        <div className="relative w-full aspect-[4/3] overflow-hidden bg-slate-900">
           <img 
             src={product.image} 
             alt={product.title}
-            className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-90 group-hover:opacity-100"
             loading="lazy"
           />
           <div className="absolute top-4 left-4">
-            <span className="bg-brand-dark/90 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg border border-white/10">
+            <span className="bg-brand-dark/80 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg border border-white/10">
                 {product.badge}
             </span>
           </div>
@@ -187,16 +187,16 @@ const ProductCard: React.FC<{ product: Project }> = ({ product }) => {
 
         {/* Content Area */}
         <div className="p-8 flex flex-col flex-grow">
-            <h3 className="font-serif text-xl md:text-2xl text-slate-800 mb-3 leading-tight">{product.title}</h3>
-            <p className="text-sm text-slate-500 font-light leading-relaxed mb-6">
+            <h3 className="font-serif text-xl md:text-2xl text-white mb-3 leading-tight">{product.title}</h3>
+            <p className="text-sm text-slate-400 font-light leading-relaxed mb-6">
                 {product.description}
             </p>
 
             {/* Specs List */}
-            <div className="mt-auto mb-8 space-y-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+            <div className="mt-auto mb-8 space-y-3 bg-slate-900/50 p-4 rounded-2xl border border-slate-800">
                 {product.specs.map((spec, i) => (
-                    <div key={i} className="flex items-start gap-3 text-xs md:text-sm font-medium text-slate-700">
-                        <div className="mt-0.5 w-4 h-4 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center shrink-0">
+                    <div key={i} className="flex items-start gap-3 text-xs md:text-sm font-medium text-slate-300">
+                        <div className="mt-0.5 w-4 h-4 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0">
                             <Check size={10} strokeWidth={3} />
                         </div>
                         {spec}
@@ -209,7 +209,7 @@ const ProductCard: React.FC<{ product: Project }> = ({ product }) => {
                 href={`https://wa.me/4917661644048?text=Hallo,%20ich%20habe%20eine%20Preisanfrage%20zu:%20${encodeURIComponent(product.title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-[#25D366] hover:bg-[#1fa851] text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-colors shadow-md shadow-green-200 group-hover:-translate-y-1 duration-300"
+                className="w-full bg-brand-orange hover:bg-brand-orange-hover text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-colors shadow-md shadow-orange-900/20 group-hover:-translate-y-1 duration-300 border border-brand-orange"
             >
                 <MessageCircle size={20} fill="white" className="text-white" />
                 Preisanfrage
